@@ -21,6 +21,7 @@ class Mobil {
         echo 'Warna : '. $this->warna.'<br>';
         echo 'Pemilik : '. $nama.'<br>';
         echo 'Keterangan : '. $ket.'<br>';
+        echo '<br>';
 
 
 
@@ -34,9 +35,18 @@ class Mobil {
 
 }
 
+class Kendaraan extends Mobil{
+    public $jenis;
+
+    public function bergerak()
+    {
+        echo 'Kendaraan sedang bergerak';
+    }
+}
 // objek
 
 $mobil = new Mobil();
+$kendaraan = new Kendaraan ();
 $mobil->merek = 'Avanza';
 $mobil->model = 'Nova';
 $mobil->tahun = 2023;
@@ -47,3 +57,6 @@ $mobil->warna = 'Putih';
 $ket = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero animi debitis sequi non inventore hic quos neque officia ducimus exercitationem.';
 
 $mobil->cek('Grace',$ket);
+$kendaraan->merek = 'BMW';
+echo $kendaraan-> merek ;
+$kendaraan->cek('Ghe','');
